@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 
 import {SharedModule} from 'src/app/shared/shared.module';
-import {<%= classify(pluralize(name)) %>RoutingModule} from './<%= dasherize(pluralize(name)) %>.routing.module';
+import {<%= classify(name) %>RoutingModule} from './<%= dasherize(name) %>.routing.module';
 
 <% if(ui.toString() === 'bootstrap'){ %>
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -47,7 +47,7 @@ import {
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,<% } %>
-    <%= classify(pluralize(name)) %>RoutingModule
+    <%= classify(name) %>RoutingModule
   ],
   providers: [
     <%= classify(pluralize(service)) %>Service,
